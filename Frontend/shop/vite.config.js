@@ -7,6 +7,7 @@ export default defineConfig({
     react(),
     tailwindcss() // ✅ kept untouched
   ],
+  base: '/My-Shop/',
   server: {
     proxy: {
       '/api': {
@@ -15,9 +16,4 @@ export default defineConfig({
       }
     }
   },
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-  },
-  base: '/static/', // ✅ required for correct paths in Django
 })
